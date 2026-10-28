@@ -1,0 +1,12 @@
+﻿PS> Get-CimInstance Win32_Processor | Select-Object VirtualizationFirmwareEnabled, VMMonitorModeExtensions, SecondLevelAddressTranslationExtensions | Format-List
+
+
+VirtualizationFirmwareEnabled           : True
+VMMonitorModeExtensions                 : False
+SecondLevelAddressTranslationExtensions : False
+
+PS> Get-CimInstance Win32_ComputerSystem | Select-Object HypervisorPresent | Format-List
+
+
+HypervisorPresent : True
+

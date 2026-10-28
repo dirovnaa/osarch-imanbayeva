@@ -1,0 +1,13 @@
+﻿PS> Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType, @{n='SizeGB';e={[math]::Round($_.Size/1GB,1)}} | Format-Table -AutoSize
+
+FriendlyName    MediaType BusType SizeGB
+------------    --------- ------- ------
+HFS001TEJ9X110N SSD       NVMe     953.9
+
+PS> Get-Volume | Where-Object DriveLetter | Select-Object DriveLetter, FileSystemLabel, FileSystem, @{n='SizeGB';e={[math]::Round($_.Size/1GB,1)}}, @{n='FreeGB';e={[math]::Round($_.SizeRemaining/1GB,1)}} | Format-Table -AutoSize
+
+DriveLetter FileSystemLabel FileSystem SizeGB FreeGB
+----------- --------------- ---------- ------ ------
+          D WINDRIVER       NTFS          7.1      1
+          C                 NTFS        944.8  281.4
+

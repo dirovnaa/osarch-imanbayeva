@@ -1,0 +1,12 @@
+﻿PS> Get-CimInstance Win32_PhysicalMemory | Select-Object DeviceLocator, Manufacturer, PartNumber, @{n='GB';e={$_.Capacity/1GB}}, Speed, ConfiguredClockSpeed | Format-Table -AutoSize
+
+DeviceLocator Manufacturer PartNumber           GB Speed ConfiguredClockSpeed
+------------- ------------ ----------           -- ----- --------------------
+DIMM 0        Kingston     ACR56S46BS8HA-16KM   16  5600                 4800
+
+PS> Get-CimInstance Win32_PhysicalMemoryArray | Select-Object MemoryDevices, @{n='MaxGB';e={$_.MaxCapacity/1MB}} | Format-List
+
+
+MemoryDevices : 2
+MaxGB         : 64
+

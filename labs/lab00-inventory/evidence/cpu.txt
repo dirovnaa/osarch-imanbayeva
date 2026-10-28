@@ -1,0 +1,8 @@
+﻿PS> Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors, MaxClockSpeed | Format-List
+
+
+Name                      : AMD Ryzen 7 7735HS with Radeon Graphics        
+NumberOfCores             : 8
+NumberOfLogicalProcessors : 16
+MaxClockSpeed             : 3201
+

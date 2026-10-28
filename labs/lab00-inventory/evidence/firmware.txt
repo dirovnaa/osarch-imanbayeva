@@ -1,0 +1,10 @@
+﻿PS> $env:firmware_type
+UEFI
+
+PS> Get-CimInstance Win32_BIOS | Select-Object Manufacturer, SMBIOSBIOSVersion, ReleaseDate | Format-List
+
+
+Manufacturer      : INSYDE Corp.
+SMBIOSBIOSVersion : V1.52
+ReleaseDate       : 8/4/2026 5:00:00 AM
+
