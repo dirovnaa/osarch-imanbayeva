@@ -1,5 +1,5 @@
 # Lab 1 — Your first virtual machine
-Pair: <<Imanbayeva Daiana>> — individual work, as instructed in class for this lab
+Pair: <<Daiana>> — individual work, as instructed in class for this lab
 Machine: Acer Nitro ANV15-41, Windows 11 Pro (10.0.26200); guest: Ubuntu Server 26.04.1 LTS (`lab01-ubuntu`) in VirtualBox
 
 ## What I did
