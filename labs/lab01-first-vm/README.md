@@ -1,7 +1,6 @@
 # Lab 1 — Your first virtual machine
-Pair: <<ЗАПОЛНИТЬ: фамилия>> — individual work, as instructed in class for this lab    Driver: <<фамилия>> (whole session)
+Pair: <<Imanbayeva Daiana>> — individual work, as instructed in class for this lab
 Machine: Acer Nitro ANV15-41, Windows 11 Pro (10.0.26200); guest: Ubuntu Server 26.04.1 LTS (`lab01-ubuntu`) in VirtualBox
-Date: <<ЗАПОЛНИТЬ: дата>>
 
 ## What I did
 1. Created VM `lab01-ubuntu` in VirtualBox: 2 vCPU, 2048 MB RAM, 25 GB dynamically allocated VDI,
