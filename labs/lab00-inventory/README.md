@@ -1,7 +1,6 @@
 # Lab 0 — Inventory your own machine
-Pair: <<ЗАПОЛНИТЬ: фамилия>> — individual work    Driver: <<фамилия>> (whole session)
+Pair: Imanbayeva Daiana — individual work
 Machine: Acer Nitro ANV15-41, Windows 11 Pro (10.0.26200)
-Date: <<ЗАПОЛНИТЬ: дата>>
 
 ## What I did
 Every value below came from PowerShell; the graphical "About" screen was not used.
