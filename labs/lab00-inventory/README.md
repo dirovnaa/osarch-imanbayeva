@@ -54,7 +54,6 @@ A matching second module would also switch the memory from single-channel to dua
   Consequence for Lab 1: VirtualBox runs on top of Hyper-V, not directly on the hardware.
 - **Memory runs slower than the module's rating.** The module is rated 5600 MT/s, but `ConfiguredClockSpeed` is 4800.
   The memory runs at the speed the platform sets, not at the speed printed on the module.
-- <<ЕСЛИ БЫЛО: что-то, что у неё реально пошло не так при выполнении — иначе удали эту строку>>
 
 ## Evidence
 - [evidence/cpu.txt](evidence/cpu.txt) — CPU model, 8 cores, 16 threads
