@@ -1,8 +1,0 @@
-$ uname -a
-Linux lab01-ubuntu 7.0.0-42-generic #42-Ubuntu SMP PREEMPT_DYNAMIC Thu Oct 15 08:06:44 UTC 2026 x86_64 GNU/Linux
-
-$ lsb_release -a
-Distributor ID:	Ubuntu
-Description:	Ubuntu 26.04.1 LTS
-Release:	26.04
-Codename:	resolute
