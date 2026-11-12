@@ -1,0 +1,24 @@
+$ sudo sysctl vm.drop_caches=3
+vm.drop_caches = 3
+
+$ cat /proc/mdstat
+Personalities : [raid1] 
+md0 : active raid1 sdb1[0]
+      2093056 blocks super 1.2 [2/1] [U_]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+unused devices: <none>
+
+$ ls -l /mnt/mirror
+total 102420
+drwx------ 2 root root     16384 Nov 12 08:03 lost+found
+-rw-r--r-- 1 root root        68 Nov 12 08:12 proof.txt
+-rw-r--r-- 1 root root 104857600 Nov 12 08:12 random-100M.bin
+
+$ cat /mnt/mirror/proof.txt
+Lab 4 - Imanbayeva Daiana - written Thu Nov 12 08:12:29 AM UTC 2026
+
+$ sha256sum /mnt/mirror/proof.txt /mnt/mirror/random-100M.bin
+20ae90ce902a0afbd7be7a1b884b9634f59188f533bdaf58cb97efab80375830  /mnt/mirror/proof.txt
+be4783322caecff985fc35985a1ae5aefbdd12893c34ed00bb20870aa26f7640  /mnt/mirror/random-100M.bin
+

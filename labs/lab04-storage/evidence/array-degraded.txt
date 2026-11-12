@@ -1,0 +1,42 @@
+$ sudo mdadm /dev/md0 --fail /dev/sdc1
+
+$ sudo mdadm /dev/md0 --remove /dev/sdc1
+
+$ cat /proc/mdstat
+Personalities : [raid1] 
+md0 : active raid1 sdb1[0]
+      2093056 blocks super 1.2 [2/1] [U_]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+unused devices: <none>
+
+$ sudo mdadm --detail /dev/md0
+/dev/md0:
+           Version : 1.2
+     Creation Time : Thu Nov 12 08:03:17 2026
+        Raid Level : raid1
+        Array Size : 2093056 (2044.00 MiB 2143.29 MB)
+     Used Dev Size : 2093056 (2044.00 MiB 2143.29 MB)
+      Raid Devices : 2
+     Total Devices : 1
+       Persistence : Superblock is persistent
+
+     Intent Bitmap : Internal
+
+       Update Time : Thu Nov 12 08:29:03 2026
+             State : clean, degraded 
+    Active Devices : 1
+   Working Devices : 1
+    Failed Devices : 0
+     Spare Devices : 0
+
+Consistency Policy : bitmap
+
+              Name : lab01-ubuntu:0  (local to host lab01-ubuntu)
+              UUID : edbc6b45:29a0eac3:f6720308:f4b8c47d
+            Events : 21
+
+    Number   Major   Minor   RaidDevice State
+       0       8       17        0      active sync   /dev/sdb1
+       -       0        0        1      removed
+

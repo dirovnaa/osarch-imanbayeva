@@ -1,0 +1,49 @@
+PS> $env:firmware_type
+UEFI
+
+PS> Get-Disk | Format-Table Number,FriendlyName,PartitionStyle,OperationalStatus,Size -AutoSize
+
+Number FriendlyName  PartitionStyle OperationalStatus        Size
+------ ------------  -------------- -----------------        ----
+     0 VBOX HARDDISK GPT            Online            68719476736
+     1 VBOX HARDDISK RAW            Online             2147483648
+
+
+
+PS> Initialize-Disk -Number 1 -PartitionStyle GPT -PassThru | Format-Table Number,PartitionStyle,Size -AutoSize
+
+Number PartitionStyle       Size
+------ --------------       ----
+     1 RAW            2147483648
+
+
+
+PS> New-Partition -DiskNumber 1 -UseMaximumSize -AssignDriveLetter | Format-Table DiskNumber,PartitionNumber,DriveLetter,Size,Type -AutoSize
+
+DiskNumber PartitionNumber DriveLetter       Size Type 
+---------- --------------- -----------       ---- ---- 
+         1               2           E 2130640896 Basic
+
+
+
+PS> Get-Partition -DiskNumber 1 | Where-Object DriveLetter | Format-Volume -FileSystem NTFS -NewFileSystemLabel LAB04 -Confirm:$false | Format-Table DriveLetter,FileSystemLabel,FileSystem,Size,SizeRemaining -AutoSize
+
+DriveLetter FileSystemLabel FileSystem       Size SizeRemaining
+----------- --------------- ----------       ---- -------------
+          E LAB04           NTFS       2130636800    2109972480
+
+
+
+PS> Get-Disk | Format-Table Number,FriendlyName,PartitionStyle,Size -AutoSize
+
+Number FriendlyName  PartitionStyle        Size
+------ ------------  --------------        ----
+     0 VBOX HARDDISK GPT            68719476736
+     1 VBOX HARDDISK GPT             2147483648
+
+PS> Get-Partition -DiskNumber 1 | Format-Table PartitionNumber,@{n="DriveLetter";e={if($_.DriveLetter -match "\w"){$_.DriveLetter}else{"-"}}},Size,Type -AutoSize
+
+PartitionNumber DriveLetter       Size Type    
+--------------- -----------       ---- ----    
+              1 -             16759808 Reserved
+              2 E           2130640896 Basic

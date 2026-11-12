@@ -1,0 +1,63 @@
+$ sudo parted -s /dev/sdb print
+Model: ATA VBOX HARDDISK (scsi)
+Disk /dev/sdb: 2147MB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start   End     Size    File system  Name  Flags
+ 1      1049kB  2146MB  2145MB               raid  raid
+
+
+$ cat /proc/mdstat
+Personalities : [raid1] 
+md0 : active raid1 sdc1[1] sdb1[0]
+      2093056 blocks super 1.2 [2/2] [UU]
+      bitmap: 1/1 pages [4KB], 65536KB chunk
+
+unused devices: <none>
+
+$ sudo mdadm --detail /dev/md0
+/dev/md0:
+           Version : 1.2
+     Creation Time : Thu Nov 12 08:03:17 2026
+        Raid Level : raid1
+        Array Size : 2093056 (2044.00 MiB 2143.29 MB)
+     Used Dev Size : 2093056 (2044.00 MiB 2143.29 MB)
+      Raid Devices : 2
+     Total Devices : 2
+       Persistence : Superblock is persistent
+
+     Intent Bitmap : Internal
+
+       Update Time : Thu Nov 12 08:03:43 2026
+             State : clean 
+    Active Devices : 2
+   Working Devices : 2
+    Failed Devices : 0
+     Spare Devices : 0
+
+Consistency Policy : bitmap
+
+              Name : lab01-ubuntu:0  (local to host lab01-ubuntu)
+              UUID : edbc6b45:29a0eac3:f6720308:f4b8c47d
+            Events : 18
+
+    Number   Major   Minor   RaidDevice State
+       0       8       17        0      active sync   /dev/sdb1
+       1       8       33        1      active sync   /dev/sdc1
+
+$ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS /dev/sdb /dev/sdc /dev/md0
+NAME    SIZE TYPE  FSTYPE            MOUNTPOINTS
+sdb       2G disk                    
+└─sdb1    2G part  linux_raid_member 
+  └─md0   2G raid1 ext4              /mnt/mirror
+sdc       2G disk                    
+└─sdc1    2G part  linux_raid_member 
+  └─md0   2G raid1 ext4              /mnt/mirror
+md0       2G raid1 ext4              /mnt/mirror
+
+$ df -h /mnt/mirror
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/md0        2.0G  532K  1.9G   1% /mnt/mirror
+

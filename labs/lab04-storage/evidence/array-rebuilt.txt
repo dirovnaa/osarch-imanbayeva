@@ -1,0 +1,72 @@
+$ sudo parted -s /dev/sdd mklabel gpt mkpart raid 1MiB 100% set 1 raid on
+
+$ lsblk /dev/sdd
+NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+sdd      8:48   0   2G  0 disk 
+└─sdd1   8:49   0   2G  0 part 
+
+$ sudo mdadm /dev/md0 --add /dev/sdd1
+mdadm: added /dev/sdd1
+
+$ cat /proc/mdstat
+Personalities : [raid1] 
+md0 : active raid1 sdd1[2] sdb1[0]
+      2093056 blocks super 1.2 [2/1] [U_]
+      [>....................]  recovery =  0.3% (7872/2093056) finish=4.4min speed=7872K/sec
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+unused devices: <none>
+
+$ cat /proc/mdstat
+Personalities : [raid1] 
+md0 : active raid1 sdd1[2] sdb1[0]
+      2093056 blocks super 1.2 [2/1] [U_]
+      [=====>...............]  recovery = 26.4% (553344/2093056) finish=0.1min speed=184448K/sec
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+unused devices: <none>
+
+$ sudo mdadm --wait /dev/md0
+
+$ cat /proc/mdstat
+Personalities : [raid1] 
+md0 : active raid1 sdd1[2] sdb1[0]
+      2093056 blocks super 1.2 [2/2] [UU]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+unused devices: <none>
+
+$ sudo mdadm --detail /dev/md0
+/dev/md0:
+           Version : 1.2
+     Creation Time : Thu Nov 12 08:03:17 2026
+        Raid Level : raid1
+        Array Size : 2093056 (2044.00 MiB 2143.29 MB)
+     Used Dev Size : 2093056 (2044.00 MiB 2143.29 MB)
+      Raid Devices : 2
+     Total Devices : 2
+       Persistence : Superblock is persistent
+
+     Intent Bitmap : Internal
+
+       Update Time : Thu Nov 12 08:31:15 2026
+             State : clean 
+    Active Devices : 2
+   Working Devices : 2
+    Failed Devices : 0
+     Spare Devices : 0
+
+Consistency Policy : bitmap
+
+              Name : lab01-ubuntu:0  (local to host lab01-ubuntu)
+              UUID : edbc6b45:29a0eac3:f6720308:f4b8c47d
+            Events : 41
+
+    Number   Major   Minor   RaidDevice State
+       0       8       17        0      active sync   /dev/sdb1
+       2       8       49        1      active sync   /dev/sdd1
+
+$ sha256sum /mnt/mirror/proof.txt /mnt/mirror/random-100M.bin
+20ae90ce902a0afbd7be7a1b884b9634f59188f533bdaf58cb97efab80375830  /mnt/mirror/proof.txt
+be4783322caecff985fc35985a1ae5aefbdd12893c34ed00bb20870aa26f7640  /mnt/mirror/random-100M.bin
+
