@@ -1,6 +1,6 @@
 # Lab 4 — Partition, mirror, fail, recover
 
-Pair: Imanbayeva Daiana — individual work   Driver: Imanbayeva Daiana
+Pair: Imanbayeva / Yermukhan    Driver first half: Imanbayeva
 Machine: Acer Nitro ANV15-41, Windows 11 Pro (10.0.26200); guests `lab01-ubuntu` (Ubuntu Server 26.04.1 LTS, 1 GB RAM) and `lab02-windows` (Windows 11 Enterprise evaluation) in VirtualBox 7.2
 Date: 12.11.2026
 
