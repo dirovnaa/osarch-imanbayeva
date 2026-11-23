@@ -1,0 +1,46 @@
+role,component,model,price_kzt,source,date
+accountant,CPU,AMD Ryzen 5 8500G AM5 OEM (no cooler),63990,https://shop.kz/offer/protsessor-amd-ryzen-5-8500g-am5-oem/,2026-11-23
+accountant,Memory,Netac Basic DDR5-5600 16 GB (1x16 GB),129990,https://shop.kz/offer/ddr-5-dimm-16-gb-5600-mhz-netac-basic-box-ntbsd5p56sp-16/,2026-11-23
+accountant,Monitor,Acer EK241YP6bi 23.8in IPS 1920x1080,49990,https://shop.kz/offer/monitor-23-8-acer-ek241yp6bi-black/,2026-11-23
+accountant,Operating system,Microsoft Windows 11 Professional 64-bit OEM DVD,102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-23
+accountant,Motherboard,MSI PRO A620AM-B Evo AM5 DDR5,45590,https://shop.kz/offer/materinskaya-plata-msi-pro-a620am-b-evo-am5/,2026-11-23
+accountant,CPU cooler,"ID-Cooling SE-904-XT ARGB (AM5, up to 180 W)",8800,https://shop.kz/offer/kuler-id-cooling-se-904-xt-argb-black/,2026-11-23
+accountant,SSD,Samsung 990 1 TB M.2 NVMe PCIe 4.0,121600,https://shop.kz/offer/ssd-nakopitel-1-tb-samsung-990-m-2-pcie-4-0/,2026-11-23
+accountant,Power supply,MSI MAG A550BN 550 W 80 PLUS Bronze,22590,https://shop.kz/offer/blok-pitaniya-atx-550-w-msi-mag-a550bn/,2026-11-23
+accountant,Case,Ocypus Gamma C60 WH (Micro-ATX/ATX),16690,https://shop.kz/offer/korpus-ocypus-gamma-c60-wh-white/,2026-11-23
+accountant,Keyboard + mouse,Logitech MK270 wireless,14290,https://shop.kz/offer/klaviatura-logitech-mk270-black-usb-mysh/,2026-11-23
+sales,CPU,AMD Ryzen 5 8500G AM5 OEM (no cooler),63990,https://shop.kz/offer/protsessor-amd-ryzen-5-8500g-am5-oem/,2026-11-23
+sales,Memory,AMD Radeon R5 Gamer DDR5-5600 32 GB (2x16 GB),282990,https://shop.kz/offer/ddr-5-dimm-32-gb-5600-mhz-amd-radeon-r5-gamer-2x-16-gb-kit-box-r5s532g5600u1k/,2026-11-23
+sales,Monitor,Acer EK241YP6bi 23.8in IPS 1920x1080,49990,https://shop.kz/offer/monitor-23-8-acer-ek241yp6bi-black/,2026-11-23
+sales,Operating system,Microsoft Windows 11 Professional 64-bit OEM DVD,102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-23
+sales,Motherboard,MSI PRO A620AM-B Evo AM5 DDR5,45590,https://shop.kz/offer/materinskaya-plata-msi-pro-a620am-b-evo-am5/,2026-11-23
+sales,CPU cooler,"ID-Cooling SE-904-XT ARGB (AM5, up to 180 W)",8800,https://shop.kz/offer/kuler-id-cooling-se-904-xt-argb-black/,2026-11-23
+sales,SSD,Samsung 990 1 TB M.2 NVMe PCIe 4.0,121600,https://shop.kz/offer/ssd-nakopitel-1-tb-samsung-990-m-2-pcie-4-0/,2026-11-23
+sales,Power supply,MSI MAG A550BN 550 W 80 PLUS Bronze,22590,https://shop.kz/offer/blok-pitaniya-atx-550-w-msi-mag-a550bn/,2026-11-23
+sales,Case,Ocypus Gamma C60 WH (Micro-ATX/ATX),16690,https://shop.kz/offer/korpus-ocypus-gamma-c60-wh-white/,2026-11-23
+sales,Keyboard + mouse,Logitech MK270 wireless,14290,https://shop.kz/offer/klaviatura-logitech-mk270-black-usb-mysh/,2026-11-23
+webdev,CPU,AMD Ryzen 7 7700 AM5 OEM (no cooler),100990,https://shop.kz/offer/protsessor-amd-ryzen-7-7700-am5-oem/,2026-11-23
+webdev,Memory,AMD Radeon R5 Gamer DDR5-5600 32 GB (2x16 GB),282990,https://shop.kz/offer/ddr-5-dimm-32-gb-5600-mhz-amd-radeon-r5-gamer-2x-16-gb-kit-box-r5s532g5600u1k/,2026-11-23
+webdev,Monitor,iiyama G-Master GB2770QSU-B5 27in IPS 2560x1440,169990,https://shop.kz/offer/monitor-27-iiyama-g-master-gb2770qsu-b5-black/,2026-11-23
+webdev,Operating system,"Ubuntu 26.04 LTS (free, open-source licence)",0,https://ubuntu.com/download/desktop,2026-11-23
+webdev,Motherboard,MSI PRO A620AM-B Evo AM5 DDR5,45590,https://shop.kz/offer/materinskaya-plata-msi-pro-a620am-b-evo-am5/,2026-11-23
+webdev,CPU cooler,"ID-Cooling SE-904-XT ARGB (AM5, up to 180 W)",8800,https://shop.kz/offer/kuler-id-cooling-se-904-xt-argb-black/,2026-11-23
+webdev,SSD,Samsung 990 1 TB M.2 NVMe PCIe 4.0,121600,https://shop.kz/offer/ssd-nakopitel-1-tb-samsung-990-m-2-pcie-4-0/,2026-11-23
+webdev,Power supply,MSI MAG A550BN 550 W 80 PLUS Bronze,22590,https://shop.kz/offer/blok-pitaniya-atx-550-w-msi-mag-a550bn/,2026-11-23
+webdev,Case,Ocypus Gamma C60 WH (Micro-ATX/ATX),16690,https://shop.kz/offer/korpus-ocypus-gamma-c60-wh-white/,2026-11-23
+webdev,Keyboard + mouse,Logitech MK270 wireless,14290,https://shop.kz/offer/klaviatura-logitech-mk270-black-usb-mysh/,2026-11-23
+designer,CPU,AMD Ryzen 7 7700 AM5 OEM (no cooler),100990,https://shop.kz/offer/protsessor-amd-ryzen-7-7700-am5-oem/,2026-11-23
+designer,Memory,AMD Radeon R5 Gamer DDR5-5600 32 GB (2x16 GB),282990,https://shop.kz/offer/ddr-5-dimm-32-gb-5600-mhz-amd-radeon-r5-gamer-2x-16-gb-kit-box-r5s532g5600u1k/,2026-11-23
+designer,Monitor,iiyama G-Master GB2770QSU-B5 27in IPS 2560x1440,169990,https://shop.kz/offer/monitor-27-iiyama-g-master-gb2770qsu-b5-black/,2026-11-23
+designer,Operating system,Microsoft Windows 11 Professional 64-bit OEM DVD,102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-23
+designer,Motherboard,MSI PRO A620AM-B Evo AM5 DDR5,45590,https://shop.kz/offer/materinskaya-plata-msi-pro-a620am-b-evo-am5/,2026-11-23
+designer,CPU cooler,"ID-Cooling SE-904-XT ARGB (AM5, up to 180 W)",8800,https://shop.kz/offer/kuler-id-cooling-se-904-xt-argb-black/,2026-11-23
+designer,SSD,Samsung 990 1 TB M.2 NVMe PCIe 4.0,121600,https://shop.kz/offer/ssd-nakopitel-1-tb-samsung-990-m-2-pcie-4-0/,2026-11-23
+designer,Power supply,MSI MAG A550BN 550 W 80 PLUS Bronze,22590,https://shop.kz/offer/blok-pitaniya-atx-550-w-msi-mag-a550bn/,2026-11-23
+designer,Case,Ocypus Gamma C60 WH (Micro-ATX/ATX),16690,https://shop.kz/offer/korpus-ocypus-gamma-c60-wh-white/,2026-11-23
+designer,Keyboard + mouse,Logitech MK270 wireless,14290,https://shop.kz/offer/klaviatura-logitech-mk270-black-usb-mysh/,2026-11-23
+accountant,TOTAL,total for accountant,576520,,
+sales,TOTAL,total for sales,729520,,
+webdev,TOTAL,total for webdev,783530,,
+designer,TOTAL,total for designer,886520,,
+all,GRAND TOTAL,four machines incl. monitors and OS,2976090,,
